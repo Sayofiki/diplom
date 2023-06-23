@@ -1,16 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import jsonwebtoken from 'jsonwebtoken';
+import * as url from 'url';
 
 export const REFRESH_EXPIRES_IN = 7;
 
-const jwtPrivate = path.join(__dirname, '../crypto/', 'jwtPrivate.pem');
-const refreshPrivate = path.join(__dirname, '../crypto/', 'refreshPrivate.pem');
-const refreshPublic = path.join(__dirname, '../crypto/', 'refreshPublic.pem');
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+const jwtPrivate = path.join(__dirname,'../crypto/', 'jwtPrivate.pem');
+const refreshPrivate = path.join(__dirname,'../crypto/', 'refreshPrivate.pem');
+const refreshPublic = path.join(__dirname,'../crypto/', 'refreshPublic.pem');
 const JWT_PRIV_KEY = fs.readFileSync(jwtPrivate, 'utf8');
 const REFRESH_PRIV_KEY = fs.readFileSync(refreshPrivate, 'utf8');
 const REFRESH_PUBLIC_KEY = fs.readFileSync(refreshPublic, 'utf8');
-
+export { JWT_PRIV_KEY, REFRESH_PRIV_KEY, REFRESH_PUBLIC_KEY };      
 export function issueJWT(user) {
     const { _id } = user;
     const expiresIn = '10m';

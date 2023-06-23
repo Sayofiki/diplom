@@ -1,9 +1,10 @@
 import { Strategy, ExtractJwt } from 'passport-jwt';
 import fs from 'fs';
 import path from 'path';
+import * as url from 'url';
 
-import { User } from '../db/models/User';
-
+import { User } from '../db/models/User.js';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const pathToKey = path.join(__dirname, '../crypto/', 'jwtPublic.pem');
 const PUB_KEY = fs.readFileSync(pathToKey, 'utf8');
 

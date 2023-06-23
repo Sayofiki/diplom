@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb4ddf89-c525-4d79-aae6-fac0df23c5bc" name="Changes" comment="Add files via upload">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/apiV1.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controllers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controllers/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controllers/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crypto/jwtPrivate.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crypto/jwtPublic.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crypto/refreshPrivate.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crypto/refreshPublic.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crypto/ssl.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crypto/ssl.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/models/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/cryptoHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/emails/mail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/emails/passwordReset/html.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/emails/passwordReset/text.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/emails/register/html.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/emails/register/text.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/jwtHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/passport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/securityMiddleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +54,13 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,6 +71,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2RD6Uct8Hr2BpJtY8UufozLzwf9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -54,22 +82,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\europanda\\IdeaProjects\\diplom\\node_modules\\prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="SwaggerCodegen">
       <option name="activeConfigurationType" value="FILE" />
@@ -100,7 +132,12 @@
       <workItem from="1686823161611" duration="4408000" />
       <workItem from="1686907296740" duration="3784000" />
       <workItem from="1687124449533" duration="40000" />
-      <workItem from="1687124829475" duration="7749000" />
+      <workItem from="1687124829475" duration="39557000" />
+      <workItem from="1687367596282" duration="5152000" />
+      <workItem from="1687376984035" duration="3789000" />
+      <workItem from="1687387466591" duration="8000" />
+      <workItem from="1687387488171" duration="3940000" />
+      <workItem from="1687461362642" duration="6173000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1686785503403</created>
@@ -116,11 +153,29 @@
       <option name="project" value="LOCAL" />
       <updated>1686785509793</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add files via upload">
+      <created>1687180491948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687180491948</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

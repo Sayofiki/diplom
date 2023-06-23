@@ -2,13 +2,13 @@ import https from 'https';
 import fs from 'fs';
 import * as dotenv from 'dotenv';
 import gracefulShutdown from 'http-graceful-shutdown';
-import server from './utils/server';
-app.use(cors({origin: 'http://localhost:27017'}))
+import * as server from './utils/server.js';
+
 dotenv.config();
 const { PORT } = process.env;
 
-const privateKey = fs.readFileSync('./bin/crypto/ssl.key');
-const certificate = fs.readFileSync('./bin/crypto/ssl.crt');
+const privateKey = fs.readFileSync('./crypto/ssl.key');
+const certificate = fs.readFileSync('./crypto/ssl.crt');
 
 const options = { key: privateKey, cert: certificate };
 

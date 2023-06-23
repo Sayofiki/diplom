@@ -2,7 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
 import ejs from 'ejs';
+import * as url from 'url';
 
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const templates = {
     register: fs.readFileSync(path.join(__dirname, 'register/html.ejs'), 'utf-8'),
     registerPlain: fs.readFileSync(path.join(__dirname, 'register/text.ejs'), 'utf-8'),

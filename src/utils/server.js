@@ -9,11 +9,11 @@ import * as OpenApiValidator from 'express-openapi-validator';
 import morgan from 'morgan';
 import cors from 'cors';
 import passport from 'passport';
-import * as api from '../api/controllers';
-import * as db from '../db/db';
-import { securityMiddleware } from './securityMiddleware';
+import * as api from '.././api/controllers/index.js';
+import * as db from '.././db/db.js';
+import { securityMiddleware } from './securityMiddleware.js';
 
-import { strategy } from './passport';
+import { strategy } from './passport.js';
 
 strategy(passport);
 
@@ -23,7 +23,7 @@ db.connect()
     .catch((error) => console.error(error));
 
 // load API definition
-const yamlSpecFile = './bin/api/apiV1.yaml';
+const yamlSpecFile = 'C:\\Users\\europanda\\IdeaProjects\\diplom\\src\\api\\apiV1.yaml';
 const apiDefinition = YAML.load(yamlSpecFile);
 
 const apiSummary = summarise(apiDefinition);
@@ -36,7 +36,7 @@ server.use(morgan('dev'));
 // noinspection JSCheckFunctionSignatures
 server.use(
     morgan('combined', {
-        stream: fs.createWriteStream('./bin/error.log', { flags: 'a' }),
+        stream: fs.createWriteStream('./error.log', { flags: 'a' }),
         skip(req, res) {
             return res.statusCode < 400;
         }
@@ -94,4 +94,4 @@ const connect = connector(api, apiDefinition, {
 
 connect(server);
 
-module.exports = server;
+export default api;

@@ -1,9 +1,9 @@
 import { v4 } from 'uuid';
-import { User, Session } from '../../db/models/User';
-import * as cryptoHelper from '../../utils/cryptoHelper';
-import * as jwtHelper from '../../utils/jwtHelper';
+import { User, Session } from '../../db/models/User.js';
+import * as cryptoHelper from '../../utils/cryptoHelper.js';
+import * as jwtHelper from '../../utils/jwtHelper.js';
 
-import { sendRegisterEmail, sendPasswordResetEmail } from '../../utils/emails/mail';
+import { sendRegisterEmail, sendPasswordResetEmail } from '../../utils/emails/mail.js';
 
 // удаление refresh токена из базы
 async function clearUserSessions(user) {

@@ -49,5 +49,7 @@
     "dev": "npm-run-all build server",
     "start": "yarn dev",
     "watch": "nodemon"
-  }
+  },
+  "type": "module",
+  "envFile": "${workspaceFolder}/.env"
 }
